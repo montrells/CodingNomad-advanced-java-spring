@@ -19,6 +19,7 @@ public class Laptop {
     public void setOs(OS os) {
         this.os = os;
     }
+    //newly registered bean
     @Autowired
     public void setStorage(LaptopStorage storage) {
         this.storage = storage;
