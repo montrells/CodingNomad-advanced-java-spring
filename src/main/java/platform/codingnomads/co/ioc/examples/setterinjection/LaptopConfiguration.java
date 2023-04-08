@@ -16,4 +16,8 @@ public class LaptopConfiguration {
     public OS os() {
         return new OS("ubuntu");
     }
+    @Bean
+    public LaptopStorage storage() {
+        return new LaptopStorage("1 Terrabyte");
+    }
 }

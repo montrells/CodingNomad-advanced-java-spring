@@ -8,6 +8,8 @@ public class Laptop {
     private Processor processor;
     private OS os;
 
+    private LaptopStorage storage;
+
     @Autowired
     public void setProcessor(Processor processor) {
         this.processor = processor;
@@ -17,9 +19,13 @@ public class Laptop {
     public void setOs(OS os) {
         this.os = os;
     }
+    @Autowired
+    public void setStorage(LaptopStorage storage) {
+        this.storage = storage;
+    }
 
     public String printLaptopConfiguration() {
         return "processor: " + processor.getCore() + " core " + processor.getName() +
-                "\nOS: " + os.getName();
+                "\nOS: " + os.getName() + "\nStorage: "+ storage.getStorage();
     }
 }
