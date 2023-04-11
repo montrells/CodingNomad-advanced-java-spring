@@ -1,4 +1,4 @@
-package platform.codingnomads.co.corespring.examples.springbeans.beans;
+package platform.codingnomads.co.corespring.examples.springbeans;
 
 import lombok.Getter;
 import lombok.Setter;

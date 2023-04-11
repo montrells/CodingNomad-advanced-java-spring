@@ -3,10 +3,9 @@ package platform.codingnomads.co.corespring.examples.springbeans;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import platform.codingnomads.co.corespring.examples.springbeans.beans.Telephone;
 
 @Configuration
-@ComponentScan(basePackages = "platform.codingnomads.co.corespring.examples.springbeans.beans")
+@ComponentScan(basePackages = "platform.codingnomads.co.corespring.examples.springbeans")
 public class SpringBeansDemoConfig {
     @Bean
     public Address address() {
