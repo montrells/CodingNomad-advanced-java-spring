@@ -16,6 +16,12 @@ public class ProtoTypeDemo {
         SpringBean springBean2 = ctx.getBean(SpringBean.class);
         System.out.println("Hash code: " + springBean2.hashCode());
 
+        SpringBeanTwo springBeanTwo2 = ctx.getBean(SpringBeanTwo.class);
+        System.out.println("Hash code: " + springBeanTwo2.hashCode());
+
+        SpringBeanTwo springBeanTwo3 = ctx.getBean(SpringBeanTwo.class);
+        System.out.println("Hash code: " + springBeanTwo3.hashCode());
+
         ctx.close();
     }
 }
