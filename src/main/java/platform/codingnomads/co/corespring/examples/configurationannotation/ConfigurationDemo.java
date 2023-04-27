@@ -11,9 +11,10 @@ public class ConfigurationDemo {
         applicationContext = new AnnotationConfigApplicationContext(ConfigurationDemoConfig.class);
         isBeanPresent("sampleClass", "configurationDemoConfig");
         isBeanPresent("sampleTwoClass", "configurationDemoConfig");
+        isBeanPresent("sampleThreeClass", "configurationDemoConfig");
     }
 
-    private static void isBeanPresent(String... beans) {
+    private static void isBeanPresent(String... beans) { //multiple arguments
         for (String beanName : beans) {
             System.out.println("Is " + beanName + " in ApplicationContext: " +
                     applicationContext.containsBean(beanName));

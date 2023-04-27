@@ -8,12 +8,20 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class ConfigurationDemoConfig {
 
+
+
     @Bean
     public SampleClass sampleClass() {
         return new SampleClass();
     }
     @Bean
+    
     public SampleTwoClass sampleTwoClass() {
         return new SampleTwoClass();
+    }
+
+    @Bean
+    public SampleThreeClass sampleThreeClass() {
+        return new SampleThreeClass();
     }
 }
