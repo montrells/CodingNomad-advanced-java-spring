@@ -1,5 +1,8 @@
 package platform.codingnomads.co.corespring.examples.beanannotation;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class SampleBean {
 
     public SampleBean() {
@@ -17,4 +20,8 @@ public class SampleBean {
     public void doStuff() {
         System.out.println("doStuff() - bean is doing its thing");
     }
+
+
+
+
 }

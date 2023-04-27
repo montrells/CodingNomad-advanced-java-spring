@@ -11,12 +11,20 @@ public class SampleBean {
 
     @PostConstruct
     public void init() {
-        System.out.println("bean @PostConstruct is gathering resources..");
+        System.out.println("bean MONTRELL@PostConstruct is gathering resources..");
     }
 
     @PreDestroy
     public void cleanup() {
-        System.out.println("time to @PreDestroy and head home..");
+        System.out.println("time to MONTRELL@PreDestroy and head home..");
     }
 
+    @PostConstruct
+    public void montrellPostConstruct() {
+        System.out.println("PostCostruct() - bean is doing its thing");
+    }
+    @PreDestroy
+    public void montrellPreDestruct() {
+        System.out.println("PreDestruct() - bean is doing its thing");
+    }
 }
