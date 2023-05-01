@@ -12,6 +12,8 @@ public class ConfigurationDemo {
         isBeanPresent("sampleClass", "configurationDemoConfig");
         isBeanPresent("sampleTwoClass", "configurationDemoConfig");
         isBeanPresent("sampleThreeClass", "configurationDemoConfig");
+        isBeanPresent("sampleFourClass", "configurationDemoConfig");
+        isBeanPresent("sampleFiveClass", "configurationDemoConfig");
     }
 
     private static void isBeanPresent(String... beans) { //multiple arguments
