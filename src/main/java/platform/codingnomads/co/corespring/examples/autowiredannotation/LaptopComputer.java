@@ -1,16 +1,15 @@
 package platform.codingnomads.co.corespring.examples.autowiredannotation;
 
-import lombok.ToString;
+import groovy.transform.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 @ToString
-public class DesktopComputer {
-
+public class LaptopComputer {
     @Autowired
-    @Qualifier("radeon")
+    @Qualifier("geforce")
     private VideoCard videoCard;
     @Autowired
     @Qualifier("cassio")
@@ -18,5 +17,4 @@ public class DesktopComputer {
     @Autowired
     @Qualifier("dell")
     private Dell dell;
-
 }
