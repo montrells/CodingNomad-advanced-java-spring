@@ -13,6 +13,7 @@ public class ValueAnnotationDemo {
         System.out.println(nomad.getGreeting());
         System.out.println(nomad.getBirthDate());
         System.out.println(nomad.getDescription());
+        System.out.println(nomad.getHappiness());
         final String output = nomad.output();
         System.out.println(output);
         nomad.getWorkingDays().forEach(System.out::println);

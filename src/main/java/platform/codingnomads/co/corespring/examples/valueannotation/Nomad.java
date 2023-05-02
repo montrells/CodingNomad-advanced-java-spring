@@ -11,12 +11,18 @@ public class Nomad {
 
     private String name;
     private Integer age;
+    private String happiness;
 
 
-    public Nomad(@Value("${nomad.name}") String name, @Value("${nomad.age}") Integer age) {
+
+    public Nomad(@Value("${nomad.name}") String name, @Value("${nomad.age}") Integer age,@Value("${nomad.happiness}") String happiness){
         this.name = name;
         this.age = age;
+        this.happiness =happiness;
+    }
 
+    public String getHappiness() {
+        return happiness;
     }
 
     @Value("Hello!!")
@@ -67,7 +73,7 @@ public class Nomad {
     }
 
     public String output() {
-        return "Spring Developer is building awesome software using: ".concat(jdk).concat(" , ").concat(framework).concat(ide).concat(" and ");
+        return "Spring Developer is building awesome software using: ".concat(jdk).concat(" , ").concat(framework);
     }
 
     public List<String> getWorkingDays() {
