@@ -11,5 +11,6 @@ public class ImportAnnotationDemo {
         final Framework framework = ctx.getBean(Framework.class);
         final MontrellSimple montrellSimple = ctx.getBean(MontrellSimple.class);
         ctx.close();
+        //
     }
 }
