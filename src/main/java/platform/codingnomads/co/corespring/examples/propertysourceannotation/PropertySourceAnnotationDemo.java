@@ -7,9 +7,13 @@ public class PropertySourceAnnotationDemo {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(PropertySourceAnnotationConfig.class);
         ctx.refresh();
-        final App app = ctx.getBean(App.class);
-        System.out.println("Values from myapp.properties: " +
-                "App Name: " + app.getAppName() + ", App Version: " + app.getAppVersion());
+//        final App app = ctx.getBean(App.class);
+//        System.out.println("Values from myapp.properties: " +
+//                "App Name: " + app.getAppName() + ", App Version: " + app.getAppVersion());
+//        System.out.println("*******************************");
+        final MontrellApp montrellApp = ctx.getBean( MontrellApp.class);
+        System.out.println("Values from montrellapp.properties: " +
+                "App Name: " + montrellApp.getAppNameMontrell() + ", App Version: " + montrellApp.getAppVersionMontrell());
         ctx.close();
     }
 }
