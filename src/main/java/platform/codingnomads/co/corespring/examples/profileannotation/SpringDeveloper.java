@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 @Component
 public class SpringDeveloper {
+
    // @Value("${app.test}")
     private String test;
 
