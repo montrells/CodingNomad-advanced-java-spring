@@ -1,13 +1,14 @@
 package platform.codingnomads.co.corespring.examples.profileannotation;
 
-import org.springframework.context.annotation.Profile;
+import lombok.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("deploy")
 public class SpringMontrell {
+   //@Value("${app.deploy}")
+    public String deploy;
 
-        public SpringMontrell() {
-           System.out.println("SpringDeveloperMontrell is ready.");
-        }
+    public String getDeploy() {
+        return deploy;
     }
+}
