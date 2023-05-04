@@ -16,11 +16,11 @@ public class CoreLabApplication {
         System.out.println("Time to sit down, relax, and listen to some records on my trusty "
                 + turntable.getMake() + " " + turntable.getModel() + " turntable.");
 
-        String[] records = ctx.getBeanNamesForType(Record.class);
+        String[] records = ctx.getBeanNamesForType(record.class);
 
         for (String record : records) {
-            System.out.println("Now listening to " + ctx.getBean(record, Record.class).getAlbum()
-                    + " by " + ctx.getBean(record, Record.class).getArtist() + ".");
+            System.out.println("Now listening to " + ctx.getBean(record, platform.codingnomads.co.corespring.lab.complete.record.class).getAlbum()
+                    + " by " + ctx.getBean(record, platform.codingnomads.co.corespring.lab.complete.record.class).getArtist() + ".");
         }
 
         System.out.println("Done for the day!");
