@@ -54,9 +54,9 @@ public class SpringDataJDBCExample implements CommandLineRunner {
                 .forEach(manager -> System.out.println(manager.toString()));
 
        // truncate the table
-        jdbcTemplate.execute("TRUNCATE TABLE managers;");
+       //jdbcTemplate.execute("TRUNCATE TABLE managers;");
         //delete the table
-        jdbcTemplate.execute("DROP TABLE managers");
+        //jdbcTemplate.execute("DROP TABLE managers");
     }
 //    @Override
 //    public void run(String... args) throws Exception {
