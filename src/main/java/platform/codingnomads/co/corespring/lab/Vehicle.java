@@ -4,3 +4,4 @@ public interface Vehicle {
      public void driving();
 
 }
+
