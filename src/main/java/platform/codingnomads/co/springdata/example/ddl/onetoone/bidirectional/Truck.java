@@ -1,15 +1,17 @@
 package platform.codingnomads.co.springdata.example.ddl.onetoone.bidirectional;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cars")
+@Table(name = "trucks")
 @NoArgsConstructor
 @Getter
 @Setter
-public class Car {
+public class Truck {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,7 +27,7 @@ public class Car {
     @OneToOne(
             //used to indicate that this is the child side of a relationship and refer the JPA
             //to the field in the Driver class that defines the relationship
-//            mappedBy = "car"
+            mappedBy = "truck"
     )
     private Driver driver;
 }
