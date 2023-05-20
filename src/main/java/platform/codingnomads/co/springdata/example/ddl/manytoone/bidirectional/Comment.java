@@ -4,6 +4,7 @@ import lombok.*;
 import org.apache.ibatis.annotations.One;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -21,5 +22,11 @@ public class Comment {
     @Column(nullable = false)
     private String content;
 
+    @ManyToOne(
+            cascade = CascadeType.ALL,
+            optional = false
+    )
+    @JoinColumn(name = "post_id")
+    private Post post;
 
 }

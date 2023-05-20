@@ -3,8 +3,10 @@ package platform.codingnomads.co.springdata.example.ddl.manytoone.bidirectional;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.ibatis.annotations.Many;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -22,17 +24,9 @@ public class Blog {
     @Column(nullable = false)
     private String content;
 
-    @ManyToOne(
-            cascade = CascadeType.ALL,
-            optional = false
-    )
-    private Post post;
-
-    @ManyToOne(
-            cascade = CascadeType.ALL,
-            optional = false
-    )
-    private Comment comment;
+    //Accept many posts
+    @OneToMany(mappedBy = "blog")
+    private List<Post> post;
 
 
 }

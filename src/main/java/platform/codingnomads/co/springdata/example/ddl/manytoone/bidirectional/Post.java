@@ -22,7 +22,14 @@ public class Post {
     @Column(nullable = false)
     private String content;
 
-    //this annotation references the configuration on the post field in the Comment class
     @OneToMany(mappedBy = "post")
-    private List<Blog> blogs;
+    private Set<Comment> comments;
+    //Many post to one blog
+    @ManyToOne(
+            cascade = CascadeType.ALL,
+            optional = false
+    )
+    @JoinColumn(name = "blog_id")
+    private Blog blog;
+
 }
