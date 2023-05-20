@@ -33,4 +33,11 @@ public class Post {
             inverseJoinColumns = @JoinColumn(name = "location_latitude", referencedColumnName = "latitude")
     )
     private Set<Location> locations;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Set<Likes> likes;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Set<Blog> blogs;
+
 }
