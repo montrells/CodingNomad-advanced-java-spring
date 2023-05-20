@@ -1,6 +1,8 @@
 package platform.codingnomads.co.springdata.example.ddl.manytoone.unidirectional.usingmanytoone;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -8,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Comment {
+public class Blog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +22,7 @@ public class Comment {
     @Column(nullable = false)
     private String content;
 
+    @ManyToOne(cascade = CascadeType.ALL, optional = false)
+    @JoinColumn(name = "COMMENT_ID")
+    private Comment comment;
 }
