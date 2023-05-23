@@ -7,11 +7,11 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "examples")
+@Table(name = "computers")
 @NoArgsConstructor
 @Getter
 @Setter
-public class Example {
+public class Computer {
 
     @Id
     @GeneratedValue
@@ -22,21 +22,24 @@ public class Example {
     //use @JoinColumns to indicate multiple join columns are needed in the examples table
     @JoinColumns({
             //define the first join column. It will be called referenced_id and references the id column in the user table
-            @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            @JoinColumn(name = "c_references_person_id", referencedColumnName = "person_id"),
             //define the second join column. It will be called references_name and references the name column in the user table
-            @JoinColumn(name = "user_name", referencedColumnName = "name")
+            @JoinColumn(name = "c_references_person_address", referencedColumnName = "person_address")
 
     })
-    private User user;
+    private Person person;
     //define a one-to-many relationship with a few customizations
     @ManyToOne(cascade = CascadeType.ALL, optional = false, fetch = FetchType.LAZY)
     //use @JoinColumns to indicate multiple join columns are needed in the examples table
     @JoinColumns({
             //define the first join column. It will be called referenced_id and references the id column in the user table
-            @JoinColumn(name = "person_references_person_id", referencedColumnName = "person_id"),
+            @JoinColumn(name = "c_references_user_id", referencedColumnName = "id"),
             //define the second join column. It will be called references_name and references the name column in the user table
-            @JoinColumn(name = "person_references_person_address", referencedColumnName = "person_address")
+            @JoinColumn(name = "c_references_user_name", referencedColumnName = "name")
 
     })
-    private Person person;
+    private User user;
+
+
+
 }
