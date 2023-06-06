@@ -23,17 +23,19 @@ public class JpaRepoDemo implements CommandLineRunner {
         SoftDrink fanta = SoftDrink.builder().name("Fanta").rating(10).build();
         SoftDrink coke = SoftDrink.builder().name("Coca-Cola").rating(4).build();
         SoftDrink drPepper = SoftDrink.builder().name("Dr. Pepper").rating(1).build();
+        SoftDrink sprite = SoftDrink.builder().name("Sprite").rating(1).build();
 
         //save single entity instance
-        fanta = softDrinkRepo.save(fanta);
+        //fanta = softDrinkRepo.save(fanta);
+        sprite = softDrinkRepo.save(sprite);
 
         //save multiple entity instances at a time
-        List<SoftDrink> insertedSoftDrinks = softDrinkRepo.saveAll(List.of(coke, drPepper));
+        List<SoftDrink> insertedSoftDrinks = softDrinkRepo.saveAll(List.of(coke, drPepper, sprite));
 
         //make sure all entities are actually saved to the database
         softDrinkRepo.flush();
 
-        //update coke and drPepper to have rating 0 in the database
+        //update coke drPepper and sprite to have rating 0 in the database
         for (SoftDrink sd : insertedSoftDrinks) {
             sd.setRating(0);
             softDrinkRepo.save(sd);
@@ -55,7 +57,7 @@ public class JpaRepoDemo implements CommandLineRunner {
                 .forEach(System.out::println);
 
         //create page request to paginate through these 3 soft drinks. note that the first page is indicated using a 0
-        PageRequest pageRequest = PageRequest.of(0, 2);
+        PageRequest pageRequest = PageRequest.of(0, 3);
 
         System.out.println("FIRST PAGE");
         //get first page
@@ -64,6 +66,11 @@ public class JpaRepoDemo implements CommandLineRunner {
 
         System.out.println("SECOND PAGE");
         //get second page
+        page = softDrinkRepo.findAll(pageRequest.next());
+        page.getContent().forEach(System.out::println);
+
+ System.out.println("THIRD PAGE");
+        //get third page
         page = softDrinkRepo.findAll(pageRequest.next());
         page.getContent().forEach(System.out::println);
 
