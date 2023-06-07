@@ -5,9 +5,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Optional;
 
 @SpringBootApplication
 public class CrudRepoDemo implements CommandLineRunner {
@@ -23,7 +20,7 @@ public class CrudRepoDemo implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         //create new user
-        User user = User.builder().firstName("Bobby").lastName("Bobbert").age(56).build();
+        User user = User.builder().firstName("Bobby").lastName("Bobert").age(56).build();
         User user2 = User.builder().firstName("Joanne").lastName("Joanna").age(36).build();
         User user3 = User.builder().firstName("Montrell").lastName("Story").age(45).build();
         User user4 = User.builder().firstName("Roger").lastName("Jones").age(55).build();
