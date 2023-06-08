@@ -23,7 +23,7 @@ public class Lion {
     private String name;
 
     @OneToOne(cascade = CascadeType.ALL, optional = false, fetch = FetchType.EAGER)
-    private LionLocation lionLocation;
+    private LionType lionType;
 
     private String catType;
 

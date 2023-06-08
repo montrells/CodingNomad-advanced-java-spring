@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @ToString
-public class LionLocation {
+public class LionType {
 
     @Id
     @GeneratedValue
