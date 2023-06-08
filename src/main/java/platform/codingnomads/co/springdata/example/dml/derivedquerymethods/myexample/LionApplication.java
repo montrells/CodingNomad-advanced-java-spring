@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import platform.codingnomads.co.springdata.example.dml.derivedquerymethods.plantexample.Plant;
-import platform.codingnomads.co.springdata.example.dml.derivedquerymethods.plantexample.SoilType;
 
 import java.util.List;
 
