@@ -23,7 +23,7 @@ public class LionApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         LionType Africa = LionType.builder().name("Leo").brown(false).age(600).build();
         LionType AmericanMountains = LionType.builder().name("Mountains").brown(false).age(300).build();
-        LionType HouseCats = LionType.builder().name("Tom").brown(false).age(300).build();
+        LionType HouseCat = LionType.builder().name("Tom").brown(false).age(300).build();
 
         Lion AfricanLion = Lion.builder()
                 .name("Leo")
@@ -41,17 +41,17 @@ public class LionApplication implements CommandLineRunner {
                 .numDaysTillAdult(600)
                 .build();
 
-        Lion HouseCat = Lion.builder()
+        Lion AmericanHouseCat = Lion.builder()
                 .name("Tom")
                 .color(true)
-                .catType("Feline")
+                .lionType(HouseCat)
                 .catType("Domestic")
                 .numDaysTillAdult(300)
                 .build();
 
         lionRepo.save(AfricanLion);
         lionRepo.save(AmericanMountainLion);
-        lionRepo.save(HouseCat);
+        lionRepo.save(AmericanHouseCat);
 
         // DEMONSTRATE USE OF DERIVED QUERY METHODS
 
