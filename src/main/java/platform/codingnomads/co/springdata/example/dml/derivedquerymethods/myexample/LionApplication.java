@@ -19,8 +19,8 @@ public class LionApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        LionLocation Africa = LionLocation.builder().name("Leo").brown(false).ph(600).build();
-        LionLocation AmericanMountains = LionLocation.builder().name("Mountains").brown(false).ph(300).build();
+        LionLocation Africa = LionLocation.builder().name("Leo").brown(false).age(600).build();
+        LionLocation AmericanMountains = LionLocation.builder().name("Mountains").brown(false).age(300).build();
 
         Lion AfricanLion = Lion.builder()
                 .name("Leo")

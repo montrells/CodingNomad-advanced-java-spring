@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "soil_types")
+@Table(name = "lion_type")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -22,7 +22,7 @@ public class LionLocation {
     private String name;
 
     @Column(nullable = false)
-    private long ph;
+    private long age;
 
     @Column(nullable = false)
     private boolean brown;
