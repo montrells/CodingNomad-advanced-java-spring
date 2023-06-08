@@ -9,7 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PlantRepo extends JpaRepository<Plant, Long> {
+public interface
+PlantRepo extends JpaRepository<Plant, Long> {
 
 
     //////////////// INTRODUCER VARIATIONS ////////////////
