@@ -8,8 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface
-LionRepo extends JpaRepository<Lion, Long> {
+public interface LionRepo extends JpaRepository<Lion, Long> {
 
 
     //////////////// INTRODUCER VARIATIONS ////////////////
@@ -63,7 +62,7 @@ LionRepo extends JpaRepository<Lion, Long> {
     //////////////// NESTED PROPERTY CHARACTER ////////////////
 
     //find plants with a favorite soil type with pHs less than a passed in value
-    List<Lion> findByFavoriteSoilType_phLessThan(long ph);
+    List<Lion> findByCaType_ageLessThan(long age);
 
     //find plants who's favorite soil is dry
     List<Lion> findByFavoriteSoilType_dryIsTrue();

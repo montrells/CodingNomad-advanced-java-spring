@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "bigCat")
+@Table(name = "Lions")
 @Getter
 @Setter
 @NoArgsConstructor

@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.List;
 
 @SpringBootApplication
-public class LionApplication implements CommandLineRunner {
+public class LionApplication implements CommandLineRunner{
 
     @Autowired
     LionRepo lionRepo;
@@ -19,8 +19,8 @@ public class LionApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        LionType Africa = LionType.builder().name("Leo").brown(false).age(600).build();
-        LionType AmericanMountains = LionType.builder().name("Mountains").brown(false).age(300).build();
+        LionType Africa = LionType.builder().name("Leo").brown(true).age(600).build();
+        LionType American = LionType.builder().name("Pat").brown(true).age(300).build();
         LionType HouseCat = LionType.builder().name("Tom").brown(false).age(300).build();
 
         Lion AfricanLion = Lion.builder()
@@ -31,10 +31,10 @@ public class LionApplication implements CommandLineRunner {
                 .numDaysTillAdult(900)
                 .build();
 
-        Lion AmericanMountainLion = Lion.builder()
-                .name("MountainLion")
+        Lion AmericanLion = Lion.builder()
+                .name("Pat")
                 .color(true)
-                .lionType(AmericanMountains)
+                .lionType(American)
                 .catType("Panther")
                 .numDaysTillAdult(600)
                 .build();
@@ -48,7 +48,7 @@ public class LionApplication implements CommandLineRunner {
                 .build();
 
         lionRepo.save(AfricanLion);
-        lionRepo.save(AmericanMountainLion);
+        lionRepo.save(AmericanLion);
         lionRepo.save(AmericanHouseCat);
 
         // DEMONSTRATE USE OF DERIVED QUERY METHODS
